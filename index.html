@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>
+	my details
+</title>
+<link rel="stylesheet" type="text/css" href="a.css">
+</head>
+<body>
+ <ul class="tab">
+  <li><a href="#" class="tablinks" onclick="opendetails(event, 'personal details')">personal details</a></li>
+  <li><a href="#" class="tablinks" onclick="opendetails(event, 'educational details')">educational details </a></li>
+  <li><a href="#" class="tablinks" onclick="opendetails(event, 'contact details')">contact details</a></li>
+</ul>
+
+
+
+
+</body>
+<script>
+
+function opendetails(evt, details) {
+    var i, tabcontent, tablinks;
+
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    document.getElementById(details).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+</html>
